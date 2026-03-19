@@ -1,0 +1,143 @@
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║              🏰 FORTRESS SIEGE - INSTALLATION 🏰              ║
+║                                                              ║
+║          Jeu Multijoueur Temps Réel - Carte Unique          ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+📋 PRÉREQUIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Node.js 16+ installé
+   👉 Télécharge sur : https://nodejs.org
+   
+✅ Port 3000 libre
+   (ou change le port dans backend/server.js)
+
+
+⚡ INSTALLATION RAPIDE (3 étapes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ EXTRAIRE
+   Décompresse fortress-siege.tar.gz
+   
+   Windows : Clic droit > Extraire
+   Mac/Linux : double-clic
+
+2️⃣ OUVRIR UN TERMINAL
+   Windows : Ouvre "Invite de commandes" ou "PowerShell"
+   Mac : Ouvre "Terminal"
+   Linux : Ouvre "Terminal"
+   
+   Puis navigue dans le dossier :
+   cd fortress-siege
+
+3️⃣ DÉMARRER
+   Option A - Script automatique (recommandé) :
+   
+   Mac/Linux:
+   ./start.sh
+   
+   Windows:
+   cd backend
+   npm install
+   npm start
+   
+   Option B - Manuel :
+   cd backend
+   npm install
+   npm start
+
+
+🎮 JOUER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Le serveur démarre, tu verras :
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🏰 FORTRESS SIEGE - Serveur Démarré
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 URL locale :  http://localhost:3000
+
+Ouvre ton navigateur et va sur : http://localhost:3000
+
+
+📱 JOUER AVEC DES AMIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Sur le même WiFi :
+1. Trouve ton IP locale (ipconfig ou ifconfig)
+2. Partage l'URL : http://TON-IP:3000
+
+Exemple : http://192.168.1.45:3000
+
+
+🎯 COMMENT JOUER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🛡️ DÉFENSEURS
+   - Protégez la forteresse (centre)
+   - Placez murs (10💰) et tourelles (25💰)
+   
+⚔️ ATTAQUANTS
+   - Détruisez la forteresse !
+   - Attaquez structures (5💰)
+   - Assaut forteresse (10💰)
+
+💰 Ressources : +2 toutes les 3 secondes (max 100)
+
+
+🐛 PROBLÈMES ?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ "Cannot find module 'express'"
+   → cd backend && npm install
+
+❌ "Port 3000 already in use"
+   → Change le port dans backend/server.js
+
+❌ Canvas noir
+   → Refresh (Ctrl+R) ou vide le cache (Ctrl+Shift+R)
+
+Plus d'aide : Ouvre DEBUGGING.md
+
+
+📚 DOCUMENTATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+README.md        → Documentation principale
+QUICKSTART.md    → Guide rapide
+DEPLOYMENT.md    → Déployer en ligne
+ARCHITECTURE.md  → Comment ça marche
+ROADMAP.md       → Futures fonctionnalités
+DEBUGGING.md     → Résoudre les bugs
+
+
+🚀 DÉPLOYER EN LIGNE (GRATUIT)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Railway.app (recommandé) :
+1. Push sur GitHub
+2. Connecte Railway
+3. Deploy automatique !
+
+Voir DEPLOYMENT.md pour guide complet.
+
+
+💡 ASTUCES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ Modifie les couleurs dans : frontend/game.js
+✨ Ajuste la difficulté dans : backend/config.js
+✨ Teste avec plusieurs onglets pour simuler plusieurs joueurs
+✨ Utilise F12 (DevTools) pour voir les logs
+
+
+🎉 PRÊT À JOUER !
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Questions ? Ouvre README.md ou DEBUGGING.md
+
+Bon jeu ! 🏰⚔️
