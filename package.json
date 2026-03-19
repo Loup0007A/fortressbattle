@@ -1,0 +1,32 @@
+{
+  "name": "fortress-siege",
+  "version": "1.0.0",
+  "description": "Jeu multijoueur temps réel avec carte mondiale unique",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "install-all": "cd backend && npm install",
+    "test": "echo \"Tests à implémenter\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votre-username/fortress-siege.git"
+  },
+  "keywords": [
+    "multiplayer",
+    "game",
+    "realtime",
+    "websocket",
+    "nodejs",
+    "canvas",
+    "fortress",
+    "strategy"
+  ],
+  "author": "Votre Nom",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
