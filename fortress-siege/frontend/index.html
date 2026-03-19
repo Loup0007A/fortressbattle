@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>🏰 Fortress Siege - Global Multiplayer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Écran de connexion -->
+    <div id="loginScreen" class="screen active">
+      <div class="login-box">
+        <h1>🏰 FORTRESS SIEGE</h1>
+        <p class="subtitle">Carte mondiale unique • Temps réel</p>
+        <input 
+          type="text" 
+          id="usernameInput" 
+          placeholder="Ton pseudo" 
+          maxlength="15"
+          autocomplete="off"
+        >
+        <button id="joinBtn" class="btn-primary">REJOINDRE LA BATAILLE</button>
+        <div class="info">
+          <p>🛡️ <strong>Défenseurs</strong> : Protégez la forteresse</p>
+          <p>⚔️ <strong>Attaquants</strong> : Détruisez-la !</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Écran de jeu -->
+    <div id="gameScreen" class="screen">
+      <!-- Header -->
+      <div id="header">
+        <div class="header-left">
+          <div id="teamBadge" class="team-badge">⚔️ Attacker</div>
+          <button id="switchTeamBtn" class="btn-small">🔄 Changer d'équipe</button>
+        </div>
+        
+        <div class="header-center">
+          <div class="fortress-hp">
+            <span>🏰 Forteresse</span>
+            <div class="hp-bar">
+              <div id="fortressHpBar" class="hp-fill" style="width: 100%"></div>
+            </div>
+            <span id="fortressHpText">1000/1000</span>
+          </div>
+        </div>
+
+        <div class="header-right">
+          <div class="resources">
+            💰 <span id="resourcesText">50</span>/100
+          </div>
+          <div class="score">
+            ⭐ <span id="scoreText">0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Zone de jeu -->
+      <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- Overlay tactile pour mobile -->
+        <div id="touchOverlay"></div>
+      </div>
+
+      <!-- Panneau latéral -->
+      <div id="sidebar">
+        <div class="sidebar-section">
+          <h3>Actions (clic sur la carte)</h3>
+          <div id="defenderActions" class="actions-group">
+            <button class="action-btn" data-action="wall">
+              🧱 Mur
+              <span class="cost">10💰</span>
+            </button>
+            <button class="action-btn" data-action="tower">
+              🗼 Tourelle
+              <span class="cost">25💰</span>
+            </button>
+          </div>
+          <div id="attackerActions" class="actions-group">
+            <button class="action-btn" data-action="attack">
+              ⚔️ Attaquer
+              <span class="cost">5💰</span>
+            </button>
+            <button class="action-btn" data-action="attackFortress">
+              💥 Assaut Forteresse
+              <span class="cost">10💰</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <h3>Joueurs en ligne (<span id="playerCount">0</span>)</h3>
+          <div id="playerList"></div>
+        </div>
+
+        <div class="sidebar-section legend">
+          <h3>Légende</h3>
+          <div class="legend-item">🏰 Forteresse (centre)</div>
+          <div class="legend-item">🧱 Murs (50 HP)</div>
+          <div class="legend-item">🗼 Tourelles (30 HP, portée 3)</div>
+          <div class="legend-item">💰 Ressources : +2 toutes les 3s</div>
+        </div>
+      </div>
+
+      <!-- Notifications -->
+      <div id="notifications"></div>
+
+      <!-- Game Over -->
+      <div id="gameOver" class="modal">
+        <div class="modal-content">
+          <h2 id="gameOverTitle">VICTOIRE !</h2>
+          <p id="gameOverText">Les attaquants ont détruit la forteresse !</p>
+          <p class="countdown">Nouvelle partie dans <span id="countdown">5</span>s...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
